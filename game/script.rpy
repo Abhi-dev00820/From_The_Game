@@ -1,88 +1,93 @@
-﻿define h = Character(_("Hyunsang"), color="#c8ffc8")
-define m = Character(_("Mikasa"), color="#c8c8ff")
-define r = Character(_("Rangiku"), color = "c8c8ff")
-
+﻿
+define h = Character("Hyunsang", color="#c8ffc8")
+define m = Character("Mikasa", color="#c8c8ff")
+define r = Character("Rangiku", color="#c8c8ff")
+define k = Character("Mom", color="#c8c8ff")
 
 
 label start:
 
-
-    scene 
+    scene inside house hyun
     with fade
 
-    scene insidehouse hyun
     show hyunsang
 
+    "The story is set in Tokyo, Japan, in 2026."
 
-    "Hyunsang is a 18 years old guy in his high school he loves playing games . He have a childhood friend Mikasa he loves her a lot."
-    
-    "The story revolves around supernatural experience of hyunsang and Mikasa. Can they stay safe or they get into a darker stuff."
+    "Hyunsang is an 18-year-old high school student who loves playing games. His childhood friend, Mikasa, means a lot to him."
 
+    "Hyunsang lives with his divorced mother, who runs a business in Kyoto and often travels there for work. During those trips, Mikasa keeps him company."
+
+    "The story revolves around the supernatural experiences of Hyunsang and Mikasa. Can they stay safe, or will they get drawn into something darker?"
+
+    h "Mom, I'm going to school!"
+
+    k "Okay, Hyun. Get there safely!"
+
+    scene bus stop
+    with dissolve
+
+    h "It's taking forever for the bus to arrive."
+
+    scene bus
+    show hyunsang at left
+
+    h "Finally! Here we go."
+
+    scene school
+    with dissolve
+
+    "(After reaching school...)"
 
     scene classroom
     show hyunsang at left
-    hide mikasa
 
-    
+    h "Where the hell is Mikasa? She's late again!"
 
-    h "Where the fuck Mikasa is ? She is so late again for class??"
-
-    scene classroom 
     show mikasa at right
-    hide hyunsang
 
-    m "I am here Hyunsang sorry for being late."
+    m "I'm here, Hyunsang! Sorry for being late."
 
+    menu:
+        "Be angry":
+            h "I don't even want to talk to you right now."
 
-    scene classroom 
-    hide mikasa
-    show hyunsang at left
+        "Be polite":
+            h "Mikasa, please be punctual. At least try to arrive on time, okay?"
 
-    h "Mikasa be Punctual atleast be on time okay now sit next to me sensei about to come in class."
-
-    scene classroom 
-    hide mikasa
-    show hyunsang at left
-
-    h "Okay anyways come on sit here"
+    h "Anyway, come on. Sit here. Sensei is about to arrive."
 
     scene mikasaandhyun
     with fade
-    "(After class ....)"
 
-    scene mid area hs
-    show hyunsang at left
-    hide mikasa
+    "(After class...)"
 
-    h "Mikasa! Are you free toinght ?? I mean lets spend some time together today."
+    menu:
+        "Ask Mikasa to come to your home":
+            scene mid area hs
+            show hyunsang at left
+            show mikasa at right
 
-    scene mid area hs
-    hide hyunsang
-    show mikasa at right
+            h "Mikasa! Are you free tonight? Let's spend some time together. Mom is going to Kyoto for work."
 
-    m "Umm.. !! Yeah sure i will be there just don't be busy in gaming alright."
+            m "Umm... yeah, sure! I'll be there. Just don't get too busy gaming, alright?"
 
-    scene mid area hs
-    show hyunsang
-    hide mikasa
+            h "As you wish! See you this evening at my place."
 
-    h "As you say Mikasa! Lets meet at evening tonight at my home."
+        "Don't ask Mikasa":
+            scene mid area hs
+            show hyunsang at left
+            show mikasa at right
 
-    scene mid area hs
-    hide hyunsang
-    show mikasa
+            h "Well, I'll see you later, Mikasa."
 
-    m "Okay i am going home lets go."
-
-
-
-    "(Outside...)"
+            m "Okay, I'm heading home. See you!"
 
     scene bye
+    with dissolve
 
-    h "Bye Mikasa See you at evening"
+    h "Bye, Mikasa! See you later!"
 
-    m "Bbbb bieee"
+    m "B-byeee!"
 
-    
     return
